@@ -15,25 +15,34 @@ export default function App() {
   const portfolioItems: PortfolioItem[] = [
     { 
       id: 1, 
-      title: "飲食店コーポレートサイト", 
-      description: "ユーザビリティを重視したシンプルなWebサイト。WordPressを活用し、更新性を高めました。", 
-      tags: ["WordPress", "Lightning", "PHP"], 
+      title: "ポートフォリオサイト", 
+      description: "ユーザビリティを重視したシンプルなWebサイト", 
+      tags: ["React", "TypeScript"], 
       color: "from-rose-100 to-pink-100", 
       emoji: "🎨", 
-      url: "https://tachibana-lab.com/akaneya",
+      url: "https://tachibana-lab.com/",
       imageUrl: "/images/1.png"
     },
     { 
       id: 2, 
-      title: "モバイルファースト", 
-      description: "モバイル端末での使用を第一に考えたレスポンシブWebサイト。", 
-      tags: ["Next.js", "Mobile"], 
-      color: "from-blue-100 to-cyan-100", 
-      emoji: "📱", 
-      url: "https://example.com",
-      imageUrl: "/images/2.png" 
+      title: "飲食店公式サイト", 
+      description: "和をテーマにしたコーポレートサイト。担当者が更新することを想定し、WordPressを活用", 
+      tags: ["WordPress", "Lightning", "PHP"], 
+      color: "from-rose-100 to-pink-100", 
+      emoji: "🎨", 
+      url: "https://akaneya.tachibana-lab.com/",
+      imageUrl: "/images/2.png"
     },
-    // 他のアイテム...
+    { 
+      id: 3, 
+      title: "自社予約機能付き ホテル公式サイト", 
+      description: "定番機能を搭載したコーポレートサイト。予約・決済・会員登録機能あり。", 
+      tags: ["Laravel", "React", "TypeScript"], 
+      color: "from-rose-100 to-pink-100", 
+      emoji: "🎨", 
+      url: "https://kuturogi.tachibana-lab.com/",
+      imageUrl: "/images/3.png"
+    },
   ];
 
   const [selectedItem, setSelectedItem] = useState<PortfolioItem | null>(null);
