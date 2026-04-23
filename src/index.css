@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@theme {
+  /* 柔らかい丸文字をデフォルトに設定 */
+  --font-sans: "Zen Maru Gothic", sans-serif;
+  /* タイトル用にきれいなフォントを設定 */
+  --font-serif: "Noto Sans JP", serif;
+}
+
+body {
+  font-family: var(--font-sans);
+}
