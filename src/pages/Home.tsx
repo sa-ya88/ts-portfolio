@@ -5,7 +5,7 @@ const links = [
   { to: "/about", label: "自己紹介", body: "経歴と扱ってきた技術" },
   { to: "/achievements", label: "実績", body: "守秘の範囲で公開できる実務" },
   { to: "/portfolio", label: "ポートフォリオ", body: "公開しているデモサイト" },
-  { to: "/hire", label: "仕事の依頼", body: "料金目安と進め方" },
+  // { to: "/hire", label: "仕事の依頼", body: "料金目安と進め方" },
 ];
 
 export default function Home() {

@@ -6,12 +6,12 @@ export default function About() {
       <p className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">About</p>
       <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-800">自己紹介</h1>
       <p className="mt-4 leading-relaxed text-gray-500">
-        北海道札幌市厚別区に居住。フロントエンドからバックエンドまで、業務システムと Web サイトの設計・実装を行っています。既存システムの改修や保守運用、システムの構築まで幅広く対応します。
+        北海道札幌市に居住。フロントエンドからバックエンドまで、業務システムと Web サイトの設計・実装を行っています。既存システムの改修や保守運用、システムの構築まで幅広く対応します。
       </p>
 
       <section className="mt-10 space-y-4">
         <h2 className="text-lg font-bold text-gray-800">今まで対応した要望</h2>
-        <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-gray-600">
+        <ul className="list-disc space-y-2 pl-5 leading-relaxed text-gray-600">
           <li>現在使っているシステムの委託会社が撤退するため、システムを刷新し、保守してほしい。</li>
           <li>現在使っているレンタルサーバーが廃止され移行したが、うまく機能しないので直してほしい。</li>
           <li>Excelで管理している顧客情報をシステム化して管理しやすくしたい。</li>
@@ -21,7 +21,7 @@ export default function About() {
 
       <section className="mt-10 space-y-4">
         <h2 className="text-lg font-bold text-gray-800">実務で扱ってきた内容</h2>
-        <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-gray-600">
+        <ul className="list-disc space-y-2 pl-5 leading-relaxed text-gray-600">
           <li>コーポレートサイトの保守運用・サーバー移行（WordPress）</li>
           <li>社内システムの移行、新システムの構築・導入（Laravel、VB.net）</li>
           <li>在庫管理システムの機能追加、統合テスト（Java、Spring Boot）</li>
@@ -33,14 +33,14 @@ export default function About() {
 
       <section className="mt-10 space-y-4">
         <h2 className="text-lg font-bold text-gray-800">いま受けたい仕事</h2>
-        <p className="text-sm leading-relaxed text-gray-600">
-          中小規模の業務システム（在庫・会員・管理画面）や既存システムの構築・改修、店舗・コーポレートサイトの構築や保守運用を中心に受けています。要件が固まっていない段階の相談も可能です。
+        <p className="leading-relaxed text-gray-600">
+          中小規模の業務システム（在庫・会員・管理画面）や既存システムの構築・改修、店舗・コーポレートサイトの構築や保守運用を中心に受けています。要件が固まっていない段階の作業も可能です。
         </p>
       </section>
 
       <section className="mt-10 space-y-4">
         <h2 className="text-lg font-bold text-gray-800">経験技術</h2>
-        <p className="text-sm leading-relaxed text-gray-600">
+        <p className="leading-relaxed text-gray-600">
           25歳の頃に地方公務員からIT業界へ転職。テストから実装・要件定義までを経験し、クレジットカード会社の社内SEへ転職。社内システムの開発作業（DX化）を中心に、PCのキッティング作業やファイルサーバー管理なども行っていました。その後、知人の紹介で仕事を受けることになり、フリーランスへ転身。エンジニア歴は計5年になります。
         </p>
         <dl className="grid gap-4 sm:grid-cols-2">
@@ -57,7 +57,7 @@ export default function About() {
 
       <section className="mt-10 space-y-4">
         <h2 className="text-lg font-bold text-gray-800">資格</h2>
-        <ul className="space-y-2 text-sm text-gray-600">
+        <ul className="space-y-2 text-gray-600">
           <li>2023/11 基本情報技術者試験</li>
           <li>2022/04 Oracle Database 19c ORACLE MASTER Silver DBA 2019</li>
           <li>2022/01 Oracle Certified Java Programmer Gold SE 11</li>
@@ -65,12 +65,12 @@ export default function About() {
       </section>
 
       <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-        <Link
+        {/* <Link
           to="/hire"
           className="inline-flex items-center justify-center rounded-2xl border-2 border-gray-800 px-6 py-3 text-sm font-bold text-gray-800 hover:bg-gray-50"
         >
           仕事の依頼について
-        </Link>
+        </Link> */}
         <Link
           to="/contact"
           className="inline-flex items-center justify-center rounded-2xl bg-gray-800 px-6 py-3 text-sm font-bold text-white hover:bg-gray-700"

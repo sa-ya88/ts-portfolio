@@ -8,7 +8,7 @@ const navItems = [
   { to: "/about", label: "自己紹介" },
   { to: "/achievements", label: "実績" },
   { to: "/portfolio", label: "ポートフォリオ" },
-  { to: "/hire", label: "仕事の依頼" },
+  // { to: "/hire", label: "仕事の依頼" },
   { to: "/contact", label: "お問い合わせ" },
 ];
 
