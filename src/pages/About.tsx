@@ -5,9 +5,7 @@ export default function About() {
     <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
       <p className="eyebrow">About</p>
       <h1 className="mt-2 text-3xl font-bold tracking-tight text-ink">自己紹介</h1>
-      <p className="mt-4 leading-relaxed text-ink/70">
-        橘　咲綾
-      </p>
+      <h2 className="mt-4 text-lg font-bold text-ink">橘　咲綾</h2>
       <p className="mt-4 leading-relaxed text-ink/70">
         北海道札幌市に居住。<br />
         ２５歳の頃に地方公務員からIT業界へ転職。テストから実装・要件定義までを経験し、クレジットカード会社の社内SEへ転職。
@@ -19,12 +17,21 @@ export default function About() {
       </p>
 
       <section className="mt-10 space-y-4">
+        <h2 className="text-lg font-bold text-ink">適格請求書発行事業者</h2>
+        <p className="leading-relaxed text-ink/75">
+          インボイス制度に対応しています。登録番号は
+          <span className="mx-1 font-bold tracking-wide text-ink">T7810144471116</span>
+          です。
+        </p>
+      </section>
+
+      <section className="mt-10 space-y-4">
         <h2 className="text-lg font-bold text-ink">今まで対応した要望</h2>
         <ul className="list-disc space-y-2 pl-5 leading-relaxed text-ink/75">
           <li>現在使っているシステムの委託会社が撤退するため、システムを刷新し、保守してほしい。</li>
-          <li>現在使っているレンタルサーバーが廃止され移行したが、うまく機能しないので直してほしい。</li>
+          <li>現在使っているレンタルサーバーが廃止され移行したが、表示崩れや不具合を直してほしい。</li>
           <li>Excelで管理している顧客情報をシステム化して管理しやすくしたい。</li>
-          <li>単純作業を効率化したいが、大規模なシステムはいらないので、VBA、Access等を使って業務時間を短縮してほしい。</li>
+          <li>単純作業を効率化したいが、システムやサービスを導入せずにVBAなどで業務時間を短縮してほしい。</li>
         </ul>
       </section>
 
@@ -44,6 +51,14 @@ export default function About() {
         <h2 className="text-lg font-bold text-ink">いま受けたい仕事</h2>
         <p className="leading-relaxed text-ink/75">
           中小規模の業務システム（在庫・会員・管理画面）や既存システムの構築・改修、店舗・コーポレートサイトの構築や保守運用を中心に受けています。要件が固まっていない段階の作業も可能です。
+        </p>
+      </section>
+
+      <section className="mt-10 space-y-4">
+        <h2 className="text-lg font-bold text-ink">稼働時間</h2>
+        <p className="leading-relaxed text-ink/75">
+          平日9：00～20：00の間を目安に稼働しています。
+          時間外、土日祝の突発対応も調整可能です。
         </p>
       </section>
 
@@ -68,6 +83,22 @@ export default function About() {
           <li>2022/04 Oracle Database 19c ORACLE MASTER Silver DBA 2019</li>
           <li>2022/01 Oracle Certified Java Programmer Gold SE 11</li>
         </ul>
+      </section>
+
+      <section className="mt-10 space-y-4">
+        <h2 className="text-lg font-bold text-ink">作業環境</h2>
+        <dl className="grid gap-4 sm:grid-cols-2">
+          <Skill label="モデル名" value="GALLERIA XPR7A-R56T8G-GD Ryzen 7 7700搭載" />
+          <Skill label="OS" value="Windows 11 Pro 64ビット" />
+          <Skill label="メモリ" value="32GB (16GBx2)" />
+          <Skill label="SSD" value="1TB SSD (M.2 NVMe Gen4)" />
+          <Skill label="CPU" value="AMD Ryzen 7 7700 (3.8GHz-5.3GHz/8コア/16スレッド)" />
+          <Skill label="GPU" value="NVIDIA GeForce RTX 5060 Ti 8GB GDDR7" />
+          <Skill label="その他" value="光回線あり" />
+        </dl>
+        <p className="mt-4 leading-relaxed text-ink/75">
+          ローカル環境でのLLM（大規模言語モデル）の動作用検証、画像生成AIのチューニング、Unity/Unreal Engineを用いた3Dゲーム開発や高負荷なビルド処理にもスムーズに対応可能です。
+        </p>
       </section>
 
       <div className="mt-10 flex flex-col gap-3 sm:flex-row">
