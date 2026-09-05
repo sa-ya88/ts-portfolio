@@ -2,8 +2,49 @@
 
 @theme {
   --font-sans: "Zen Maru Gothic", sans-serif;
+  --color-coral: #c4786a;
+  --color-coral-dark: #a85f53;
+  --color-sun: #dcc9a8;
+  --color-mint: #7a9e96;
+  --color-sky: #7d92a8;
+  --color-violet: #8d8496;
+  --color-ink: #3d3a38;
+  --color-cream: #f6f3ef;
 }
 
 body {
   font-family: var(--font-sans);
+}
+
+.page-bg {
+  background-color: var(--color-cream);
+  background-image:
+    radial-gradient(ellipse 70% 45% at 0% -8%, rgb(196 120 106 / 0.12), transparent 55%),
+    radial-gradient(ellipse 55% 40% at 100% 0%, rgb(125 146 168 / 0.12), transparent 50%),
+    radial-gradient(ellipse 45% 35% at 85% 100%, rgb(122 158 150 / 0.1), transparent 55%),
+    radial-gradient(ellipse 40% 30% at 8% 92%, rgb(220 201 168 / 0.22), transparent 50%);
+}
+
+.btn-pop {
+  @apply inline-flex items-center justify-center rounded-2xl bg-coral px-6 py-3 text-sm font-bold text-white transition hover:bg-coral-dark;
+}
+
+.btn-pop-outline {
+  @apply inline-flex items-center justify-center rounded-2xl border border-ink/20 bg-white px-6 py-3 text-sm font-bold text-ink transition hover:border-coral/40 hover:bg-cream;
+}
+
+.card-pop {
+  @apply rounded-[1.75rem] border border-ink/10 bg-white/80 shadow-[0_8px_24px_rgb(61_58_56_/_0.04)] backdrop-blur-sm;
+}
+
+.chip-pop {
+  @apply rounded-full border border-coral/20 bg-coral/8 px-3 py-1 text-xs font-bold text-coral-dark;
+}
+
+.chip-mint {
+  @apply rounded-full border border-mint/25 bg-mint/10 px-3 py-1 text-xs font-bold text-ink/80;
+}
+
+.eyebrow {
+  @apply text-xs font-bold uppercase tracking-[0.22em] text-coral/80;
 }

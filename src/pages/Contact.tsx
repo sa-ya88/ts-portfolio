@@ -93,35 +93,35 @@ export default function Contact() {
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14">
-      <p className="text-xs font-bold uppercase tracking-[0.2em] text-gray-400">Contact</p>
-      <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-800">お問い合わせ</h1>
-      <p className="mt-4 leading-relaxed text-gray-500">
-        2営業日以内を目安に返信します。返信は
-        <a href={`mailto:${CONTACT_EMAIL}`} className="mx-1 font-bold text-gray-700 underline">
+      <p className="eyebrow">Contact</p>
+      <h1 className="mt-2 text-3xl font-bold tracking-tight text-ink">お問い合わせ</h1>
+      <p className="mt-4 leading-relaxed text-ink/70">
+        3日以内を目安に返信します。返信は
+        <a href={`mailto:${CONTACT_EMAIL}`} className="mx-1 font-bold text-coral underline underline-offset-4">
           {CONTACT_EMAIL}
         </a>
         から行います。
       </p>
 
       {status === "sent" ? (
-        <div className="mt-10 rounded-2xl border border-orange-100 bg-orange-50/60 p-6">
-          <p className="font-bold text-gray-800">送信ありがとうございました。</p>
-          <p className="mt-2 text-sm text-gray-500">内容を確認のうえ、ご入力のメールアドレスへご連絡します。</p>
+        <div className="card-pop mt-10 border-l-4 border-l-mint p-6">
+          <p className="font-bold text-ink">送信ありがとうございました。</p>
+          <p className="mt-2 text-sm text-ink/60">内容を確認のうえ、ご入力のメールアドレスへご連絡します。</p>
           <button
             type="button"
-            className="mt-4 text-sm font-bold text-orange-800/80 hover:underline"
+            className="mt-4 text-sm font-bold text-coral hover:underline"
             onClick={() => setStatus("idle")}
           >
             別の内容を送る
           </button>
         </div>
       ) : status === "confirming" || status === "sending" ? (
-        <div className="mt-10 space-y-5 rounded-[2rem] border border-gray-100 bg-white p-5 sm:p-8">
+        <div className="card-pop mt-10 space-y-5 p-5 sm:p-8">
           <div>
-            <p className="text-lg font-bold text-gray-800">送信内容の確認</p>
-            <p className="mt-1 text-sm text-gray-500">内容に問題なければ「この内容で送信する」を押してください。</p>
+            <p className="text-lg font-bold text-ink">送信内容の確認</p>
+            <p className="mt-1 text-sm text-ink/60">内容に問題なければ「この内容で送信する」を押してください。</p>
           </div>
-          <dl className="divide-y divide-gray-100 rounded-2xl border border-gray-100 bg-[#FAF9F6]">
+          <dl className="divide-y divide-ink/10 rounded-2xl border border-ink/10 bg-cream/80">
             <ConfirmRow label="お名前" value={form.name} />
             <ConfirmRow label="メールアドレス" value={form.email} />
             <ConfirmRow label="会社名・屋号" value={form.company || "（なし）"} />
@@ -135,7 +135,7 @@ export default function Contact() {
               type="button"
               disabled={status === "sending"}
               onClick={() => void sendForm()}
-              className="w-full rounded-2xl bg-gray-800 px-6 py-4 text-sm font-bold tracking-widest text-white shadow-lg transition-all hover:bg-gray-700 disabled:opacity-60 sm:w-auto sm:min-w-56"
+              className="btn-pop w-full px-6 py-4 tracking-widest disabled:opacity-60 sm:w-auto sm:min-w-56"
             >
               {status === "sending" ? "送信中…" : "この内容で送信する"}
             </button>
@@ -143,14 +143,14 @@ export default function Contact() {
               type="button"
               disabled={status === "sending"}
               onClick={() => setStatus("idle")}
-              className="w-full rounded-2xl border border-gray-200 bg-white px-6 py-4 text-sm font-bold tracking-widest text-gray-600 transition-all hover:bg-gray-50 disabled:opacity-60 sm:w-auto sm:min-w-40"
+              className="btn-pop-outline w-full px-6 py-4 tracking-widest disabled:opacity-60 sm:w-auto sm:min-w-40"
             >
               修正する
             </button>
           </div>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="mt-10 space-y-5 rounded-[2rem] border border-gray-100 bg-white p-5 sm:p-8">
+        <form onSubmit={handleSubmit} className="card-pop mt-10 space-y-5 p-5 sm:p-8">
           <Field label="お名前" required currentLength={form.name.length} maxLength={LIMITS.name}>
             <input
               required
@@ -223,7 +223,7 @@ export default function Contact() {
 
           <button
             type="submit"
-            className="w-full rounded-2xl bg-gray-800 px-6 py-4 text-sm font-bold tracking-widest text-white shadow-lg transition-all hover:bg-gray-700"
+            className="btn-pop w-full px-6 py-4 tracking-widest"
           >
             送信する
           </button>
@@ -234,7 +234,7 @@ export default function Contact() {
 }
 
 const inputClass =
-  "w-full rounded-2xl border border-gray-200 bg-[#FAF9F6] px-4 py-3 text-sm text-gray-800 outline-none transition-colors focus:border-orange-200 focus:bg-white";
+  "w-full rounded-2xl border border-ink/12 bg-cream/70 px-4 py-3 text-sm text-ink outline-none transition-colors focus:border-coral/50 focus:bg-white";
 
 function ConfirmRow({
   label,
@@ -247,8 +247,8 @@ function ConfirmRow({
 }) {
   return (
     <div className="px-4 py-3 sm:grid sm:grid-cols-[8.5rem_1fr] sm:gap-4 sm:px-5">
-      <dt className="text-xs font-bold tracking-wider text-gray-400">{label}</dt>
-      <dd className={`mt-1 text-sm text-gray-800 sm:mt-0 ${multiline ? "whitespace-pre-wrap leading-relaxed" : ""}`}>
+      <dt className="text-xs font-bold tracking-wider text-coral">{label}</dt>
+      <dd className={`mt-1 text-sm text-ink sm:mt-0 ${multiline ? "whitespace-pre-wrap leading-relaxed" : ""}`}>
         {value}
       </dd>
     </div>
@@ -270,11 +270,11 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="mb-2 flex items-center gap-2 text-xs font-bold tracking-wider text-gray-500">
+      <span className="mb-2 flex items-center gap-2 text-xs font-bold tracking-wider text-ink/60">
         {label}
-        {required && <span className="rounded-full bg-orange-50 px-2 py-0.5 text-[10px] text-orange-800/70">必須</span>}
+        {required && <span className="rounded-full bg-coral/12 px-2 py-0.5 text-[10px] text-coral-dark">必須</span>}
         {maxLength != null && currentLength != null && (
-          <span className={`ml-auto font-medium tabular-nums ${currentLength >= maxLength ? "text-orange-800/80" : "text-gray-400"}`}>
+          <span className={`ml-auto font-medium tabular-nums ${currentLength >= maxLength ? "text-coral" : "text-ink/35"}`}>
             {currentLength}/{maxLength}
           </span>
         )}

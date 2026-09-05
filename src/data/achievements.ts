@@ -46,7 +46,7 @@ export const achievements: Achievement[] = [
     role: "ヒアリング・調査・設計・開発・DB構築・客先導入",
     summary:
       "稼働中のシステムの廃止に伴い、新システムの設計から実地導入まで対応しました。継続して保守運用を行っています。",
-    stack: ["PHP", "MySQL"],
+    stack: ["PHP", "MySQL", "Cursor AI", "Github Copilot"],
     hasDetailPage: true,
   },
   {

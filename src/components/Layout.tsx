@@ -14,8 +14,10 @@ const navItems = [
 
 function linkClass(isActive: boolean) {
   return [
-    "block rounded-xl px-3 py-2 text-sm font-bold tracking-wide transition-colors",
-    isActive ? "bg-orange-50 text-orange-800" : "text-gray-600 hover:bg-gray-50 hover:text-gray-800",
+    "block rounded-full px-3.5 py-2 text-sm font-bold tracking-wide transition-all",
+    isActive
+      ? "bg-coral/12 text-coral-dark"
+      : "text-ink/65 hover:bg-white/70 hover:text-ink",
   ].join(" ");
 }
 
@@ -31,12 +33,14 @@ export default function Layout() {
   }, [location.pathname]);
 
   return (
-    <div className="flex min-h-dvh flex-col bg-[#FAF9F6] text-gray-700 font-sans">
-      <header className="sticky top-0 z-40 border-b border-gray-100 bg-white/95 backdrop-blur-sm">
+    <div className="page-bg flex min-h-dvh flex-col font-sans text-ink">
+      <header className="sticky top-0 z-40 border-b border-ink/10 bg-white/80 backdrop-blur-md">
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6 lg:px-8">
           <NavLink to="/" end className="min-w-0">
-            <p className="truncate text-lg font-bold tracking-tight text-gray-800 sm:text-xl">TACHIBANA PORTFOLIO</p>
-            <p className="text-[11px] font-bold tracking-wider text-gray-400">System Engineer</p>
+            <p className="truncate text-lg font-bold tracking-tight sm:text-xl">
+              <span className="text-coral">TACHIBANA</span> PORTFOLIO
+            </p>
+            <p className="text-[11px] font-bold tracking-wider text-ink/40">System Engineer</p>
           </NavLink>
 
           <nav className="hidden items-center gap-1 lg:flex" aria-label="メインメニュー">
@@ -49,7 +53,7 @@ export default function Layout() {
 
           <button
             type="button"
-            className="inline-flex items-center justify-center rounded-xl border border-gray-200 px-3 py-2 text-sm font-bold text-gray-700 lg:hidden"
+            className="inline-flex items-center justify-center rounded-full border border-ink/15 bg-white px-4 py-2 text-sm font-bold text-ink lg:hidden"
             aria-expanded={menuOpen}
             aria-controls="mobile-nav"
             onClick={() => setMenuOpen((open) => !open)}
@@ -59,7 +63,7 @@ export default function Layout() {
         </div>
 
         {menuOpen && (
-          <nav id="mobile-nav" className="border-t border-gray-100 bg-white px-4 py-3 lg:hidden" aria-label="モバイルメニュー">
+          <nav id="mobile-nav" className="border-t border-ink/10 bg-white/95 px-4 py-3 lg:hidden" aria-label="モバイルメニュー">
             {navItems.map((item) => (
               <NavLink key={item.to} to={item.to} end={item.end} className={({ isActive }) => linkClass(isActive)}>
                 {item.label}
@@ -73,18 +77,20 @@ export default function Layout() {
         <Outlet />
       </div>
 
-      <footer className="border-t border-gray-100 bg-white">
-        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-xs text-gray-400 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
-          <p>TACHIBANA PORTFOLIO</p>
+      <footer className="border-t border-ink/10 bg-white/70">
+        <div className="mx-auto flex max-w-7xl flex-col gap-3 px-4 py-6 text-xs font-bold text-ink/50 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+          <p>
+            <span className="text-coral">TACHIBANA</span> PORTFOLIO
+          </p>
           <div className="flex flex-wrap items-center gap-4">
-            <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-gray-600">
+            <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-coral">
               {CONTACT_EMAIL}
             </a>
-            <a href={GITHUB_PROFILE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-gray-600">
+            <a href={GITHUB_PROFILE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 hover:text-coral">
               <FaGithub />
               GitHub
             </a>
-            <NavLink to="/contact" className="hover:text-gray-600">
+            <NavLink to="/contact" className="hover:text-coral">
               お問い合わせ
             </NavLink>
           </div>
