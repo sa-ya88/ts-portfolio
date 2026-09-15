@@ -55,10 +55,28 @@ export default function About() {
       </section>
 
       <section className="mt-10 space-y-4">
-        <h2 className="text-lg font-bold text-ink">稼働時間</h2>
-        <p className="leading-relaxed text-ink/75">
-          平日9：00～20：00の間を目安に稼働しています。
-          時間外、土日祝の突発対応も調整可能です。
+        <div className="flex flex-wrap items-end justify-between gap-3">
+          <h2 className="text-lg font-bold text-ink">稼働時間</h2>
+          <span className="chip-pop">副業として募集中</span>
+        </div>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <div className="card-pop p-4">
+            <div className="flex items-baseline justify-between gap-3">
+              <p className="text-[10px] font-bold tracking-wider text-coral">平日</p>
+              <p className="text-[10px] font-bold tracking-wider text-ink/40">4時間</p>
+            </div>
+            <p className="mt-1 text-lg font-bold text-ink">20時〜0時</p>
+          </div>
+          <div className="card-pop p-4">
+            <div className="flex items-baseline justify-between gap-3">
+              <p className="text-[10px] font-bold tracking-wider text-mint">土日祝</p>
+              <p className="text-[10px] font-bold tracking-wider text-ink/40">16時間</p>
+            </div>
+            <p className="mt-1 text-lg font-bold text-ink">8時〜0時</p>
+          </div>
+        </div>
+        <p className="text-sm leading-relaxed text-ink/60">
+          時間外・土日祝の突発対応も調整可能です。
         </p>
       </section>
 
